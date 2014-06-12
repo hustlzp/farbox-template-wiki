@@ -1,0 +1,569 @@
+[
+    {
+        "title": "Site",
+        "title_zh_cn": "网站设置",
+        "groups": [
+            {
+                "title": "Site Info",
+                "title_zh_cn": "网站信息",
+                "cells": [
+                    {
+                        "parts_per_line": 3,
+                        "parts": [
+                            {
+                                "key": "title",
+                                "title": "Site Title",
+                                "title_zh_cn": "网站标题",
+                                "default_value": "My Site",
+                                "model": "text"
+                            },
+                            {
+                                "title": "Site Keywords",
+                                "title_zh_cn": "网站关键词",
+                                "key": "keywords",
+                                "model":"text"
+                            },
+                            {
+                                "key": "avatar",
+                                "title": "Site Avatar (drag image here to replace)",
+                                "title_zh_cn": "网站头像 (拖入图片替换)",
+                                "value": "/_image/avatar.jpg",
+                                "model": "image",
+                                "width": 120,
+                                "height": 120
+                            }
+                        ]
+                    },
+
+                    {
+                        "parts_per_line": 1,
+                        "parts":[
+                            {
+                                "title": "Site Description",
+                                "title_zh_cn": "网站描述",
+                                "key": "raw_content",
+                                "model":"textarea"
+                            },
+                            {
+                                "title": "Site's Cover (drag image here to replace)",
+                                "title_zh_cn": "网站封面 (拖入图片替换)",
+                                "key": "cover",
+                                "model":"image",
+                                "value": "/_image/cover.jpg",
+                                "height": 120
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Contents Display",
+                "title_zh_cn": "内容显示",
+                "cells":[
+                    {
+                        "parts_per_line": 3,
+                        "parts":[
+                            {
+                                "key": "posts_per_page",
+                                "title": "Posts per Page",
+                                "title_zh_cn": "每页显示日志数",
+                                "default_value": 3
+                            },
+                            {
+                                "key": "post_content_type",
+                                "title": "Post Content Type",
+                                "title_zh_cn": "正文格式",
+                                "model": "select",
+                                "default_value": "markdown",
+                                "options": [
+                                    {
+                                        "value": "markdown",
+                                        "title": "Markdown"
+                                    },
+                                    {
+                                        "value": "plain",
+                                        "title": "Plain Text with Images"
+                                    }
+                                ],
+                                "options_zh_cn": [
+                                    {
+                                        "value": "markdown",
+                                        "title": "Markdown"
+                                    },
+                                    {
+                                        "value": "plain",
+                                        "title": "普通文本+图片"
+                                    }
+                                ]
+                            },
+                            {
+                                "key": "post_paragraph_indent",
+                                "title": "Paragraph Text Indent",
+                                "title_zh_cn": "段落首行缩进",
+                                "model": "select",
+                                "default_value": "no",
+                                "options": [
+                                    {
+                                        "value": "no",
+                                        "title": "No indent"
+                                    },
+                                    {
+                                        "value": "hard",
+                                        "title": "2 Letters Indent Every Line"
+                                    },
+                                    {
+                                        "value": "yes",
+                                        "title": "2 Letters Indent Every Paragraph"
+                                    }
+
+                                ],
+                                "options_zh_cn": [
+                                    {
+                                        "value": "no",
+                                        "title": "不缩进"
+                                    },
+                                    {
+                                        "value": "hard",
+                                        "title": "每行缩进2字"
+                                    },
+                                    {
+                                        "value": "yes",
+                                        "title": "每段缩进2字"
+                                    }
+                                ]
+                            },
+                            {
+                                "key": "file_path",
+                                "title": "Albums Root Path",
+                                "title_zh_cn": "相册根目录",
+                                "model": "select",
+                                "options": "root"
+                            },
+                            {
+                                "key": "show_toc",
+                                "title": "Table of Contents",
+                                "title_zh_cn": "正文自动目录",
+                                "model": "select",
+                                "default_value": "no",
+                                "options": [
+                                    {
+                                        "value": "no",
+                                        "title": "Not Display"
+                                    },
+                                    {
+                                        "value": "yes",
+                                        "title": "Display"
+                                    }
+                                ],
+                                "options_zh_cn": [
+                                    {
+                                        "value": "no",
+                                        "title": "不显示"
+                                    },
+                                    {
+                                        "value": "yes",
+                                        "title": "显示"
+                                    }
+                                ]
+                            },
+                             {
+                                "key": "mathjax",
+                                "title": "Use MathJax",
+                                "title_zh_cn": "使用MathJax",
+                                "model": "select",
+                                "default_value": "no",
+                                "options": [
+                                    {
+                                        "value": "no",
+                                        "title": "No"
+                                    },
+                                    {
+                                        "value": "yes",
+                                        "title": "Yes"
+                                    }
+                                ],
+                                "options_zh_cn": [
+                                    {
+                                        "value": "no",
+                                        "title": "不"
+                                    },
+                                    {
+                                        "value": "yes",
+                                        "title": "使用"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+
+            },
+            {
+                "title": "Social Comments",
+                "title_zh_cn": "第三方评论",
+                "cells":[
+                    {
+                        "parts_per_line": 2,
+                        "parts": [
+                            {
+                                "key": "disqus",
+                                "title": "Disqus",
+                                "title_zh_cn": "Disqus",
+                                "model": "text",
+                                "default_value": "Disqus Shortname"
+                            },
+                            {
+                                "key": "duoshuo",
+                                "title": "DuoShuo",
+                                "title_zh_cn": "多说",
+                                "model": "text",
+                                "default_value": "DuoShuo ID"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "TemplateEngine",
+        "title_zh_cn": "模板引擎",
+        "groups":[
+            {
+                "title":"Runtime",
+                "title_zh_cn":"运行",
+                "cells":[
+                    {
+                        "parts_per_line": 3,
+                        "parts":[
+                            {
+                                "key": "template_priority",
+                                "title": "Template Priority",
+                                "title_zh_cn": "模板优先级",
+                                "model": "select",
+                                "default_value": "auto",
+                                "options": [
+                                    {
+                                        "value": "auto",
+                                        "title": "Auto"
+                                    },
+                                    {
+                                        "value": "self",
+                                        "title": "Custom Template"
+                                    },
+                                    {
+                                        "value": "default",
+                                        "title": "Default Template"
+                                    }
+                                ],
+                                "options_zh_cn": [
+                                    {
+                                        "value": "auto",
+                                        "title": "自动"
+                                    },
+                                    {
+                                        "value": "self",
+                                        "title": "自定义模板"
+                                    },
+                                    {
+                                        "value": "default",
+                                        "title": "默认模板"
+                                    }
+                                ]
+                            },
+                            {
+                                "key": "template_inherit",
+                                "title": "Base Template Inherit",
+                                "title_zh_cn": "基础模板继承",
+                                "model": "select",
+                                "default_value": "yes",
+                                "options": [
+                                    {
+                                        "value": "yes",
+                                        "title": "Inherits Default Template"
+                                    },
+                                    {
+                                        "value": "no",
+                                        "title": "No Inherit"
+                                    }
+                                ],
+                                "options_zh_cn": [
+                                    {
+                                        "value": "yes",
+                                        "title": "从默认模板继承"
+                                    },
+                                    {
+                                        "value": "no",
+                                        "title": "不继承"
+                                    }
+                                ]
+                            },
+                            {
+                                "key": "template_clone_allowed",
+                                "title": "Allow Template Clone",
+                                "title_zh_cn": "允许模板克隆",
+                                "model": "select",
+                                "default_value": "yes",
+                                "options": [
+                                    {
+                                        "value": "yes",
+                                        "title": "Allow Others Clone Template!"
+                                    },
+                                    {
+                                        "value": "no",
+                                        "title": "No Allowed"
+                                    }
+                                ],
+                                "options_zh_cn": [
+                                    {
+                                        "value": "yes",
+                                        "title": "允许别人克隆模板"
+                                    },
+                                    {
+                                        "value": "no",
+                                        "title": "不允许"
+                                    }
+                                ]
+                            },
+                            {
+                                "key": "autoreload",
+                                "title": "AutoReload",
+                                "title_zh_cn": "AutoReload",
+                                "model": "select",
+                                "default_value": "auto",
+                                "options": [
+                                    {
+                                        "value": "auto",
+                                        "title": "Auto"
+                                    },
+                                    {
+                                        "value": "admin",
+                                        "title": "For Yourself Only"
+                                    },
+                                    {
+                                        "value": "yes",
+                                        "title": "For Everyone"
+                                    },
+                                    {
+                                        "value": "no",
+                                        "title": "Not Allowed"
+                                    }
+                                ],
+                                "options_zh_cn": [
+                                    {
+                                        "value": "auto",
+                                        "title": "自动"
+                                    },
+                                    {
+                                        "value": "admin",
+                                        "title": "仅自己"
+                                    },
+                                    {
+                                        "value": "yes",
+                                        "title": "每个访客都有效"
+                                    },
+                                    {
+                                        "value": "no",
+                                        "title": "不允许"
+                                    }
+                                ]
+                            }
+
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Insert Scripts",
+                "title_zh_cn":"插入脚本",
+                "cells":[
+                    {
+                        "parts_per_line": 1,
+                        "parts":[
+                            {
+                                "key": "scripts_per_page",
+                                "title": "Insert following code into every HTML page.",
+                                "title_zh_cn": "将下面的代码插入到每个HTML页面中",
+                                "model":"textarea"
+                            },
+                            {
+                                "key": "scripts_for_doc",
+                                "title": "Insert following code into Doc(post/image) page.",
+                                "title_zh_cn": "将下面的代码插入到文档(日志或图片)详细页中",
+                                "model":"textarea"
+                            }
+                        ]
+                    }
+                ]
+            }
+
+        ]
+    },
+    {
+        "title": "Advanced",
+        "title_zh_cn": "高级",
+        "groups":[
+            {
+                "title": "Feature",
+                "title_zh_cn": "功能",
+                "cells":[
+                    {
+                        "parts_per_line": 1,
+                        "parts":[
+                            {
+                                "key": "auto_image",
+                                "title": "<small>beta</small> Make Images Vivider Automatically. <a href='http://demo-for.farbox.com/post/amazing-images-demo' target=_blank> demo </a>",
+                                "title_zh_cn": "<small>beta</small> 自动美化照片. <a href='http://demo-for.farbox.com/post/amazing-images-demo' target=_blank> demo </a>",
+                                "model":"check",
+                                "default_value": "no"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Data",
+                "title_zh_cn": "数据",
+                "cells":[
+                    {
+                        "parts_per_line": 1,
+                        "parts":[
+                            {
+                                "key": "comment",
+                                "title": "Comments Allowed (if not, visitors can't comment on your posts or images).",
+                                "title_zh_cn": "允许评论（如不勾选，则访客无法评论你的文章、图片）",
+                                "model":"check",
+                                "default_value": "yes"
+                            },
+                            {
+                                "key": "sync_by_3rd",
+                                "title": "Other people put data into your site will be allowed (in the `share` folder).",
+                                "title_zh_cn": "允许其他人推送内容到你的网站(`share`目录下)",
+                                "model":"check",
+                                "default_value": "no"
+                            },
+                            {
+                                "key": "sync_by_3rd_public",
+                                "title": "No need to login when other people put data into your site.",
+                                "title_zh_cn": "其他人推送内容时，无需登录",
+                                "model":"check",
+                                "default_value": "no"
+                            }
+                        ]
+                    },
+                    {
+                        "parts_per_line": 3,
+                        "parts":[
+                            {
+                                "key": "weixin_token",
+                                "title": "WeiXin Token",
+                                "title_zh_cn": "微信公众平台Token",
+                                "only_lang": "zh_cn"
+                            }
+                        ]
+
+                    }
+                ]
+            },
+            {
+                "title":"Data Mining",
+                "title_zh_cn":"数据挖掘",
+                "cells":[
+                    {
+                        "parts_per_line": 3,
+                        "parts":[
+                            {
+                                "key": "score_degree",
+                                "title": "Hottest Sort Degree(days)",
+                                "title_zh_cn": "热门排序维度(天)",
+                                "default_value": 0.5
+                            }
+                        ]
+                    }
+                ]
+            },
+
+            {
+                "title": "URLs Forbidden",
+                "title_zh_cn":"URLs禁止访问",
+                "cells":[
+                    {
+                        "parts_per_line": 1,
+                        "parts":[
+                            {
+                                "key": "hidden_urls",
+                                "title": "URL Paths to be forbidden, one record one line, `the_path` or `the_path/*`",
+                                "title_zh_cn": "如果访问路径为以下所示，将禁止访问，每行一条记录，`the_path`或`the_path/*`",
+                                "model":"textarea",
+                                "is_list": true
+                            }
+                        ]
+                    }
+                ]
+            },
+
+            {
+                "title": "Passwords for Visitors",
+                "title_zh_cn":"访问密码",
+                "cells":[
+                    {
+                        "parts_per_line": 1,
+                        "parts":[
+                            {
+                                "key": "users",
+                                "title": "Visitors must input the username and password to access, format is 'username@password', one record one line",
+                                "title_zh_cn": "访客须输入用户名、密码才能访问，格式为'username@password', 每行一条记录 ",
+                                "model":"textarea",
+                                "is_list": true
+                            }
+                        ]
+                    }
+                ]
+            }
+
+        ]
+
+    },
+    {
+        "title": "Bind",
+        "title_zh_cn": "域名",
+        "groups":[
+            {
+                "title": "Bind Domain",
+                "title_zh_cn": "域名绑定",
+                "cells": [
+                    {
+                        "parts_per_line": 2,
+                        "parts": [
+                            {
+                                "key": "domain",
+                                "title": "Domain  <a target='_blank' href='http://doc.farbox.com/read/domain'> need help?</a>",
+                                "title_zh_cn": "域名 <a target='_blank' href='http://doc.farbox.com/read/domain'> need help?</a>"
+
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Multi Domains Binding",
+                "title_zh_cn":"多域名绑定",
+                "cells":[
+                    {
+                        "parts_per_line": 1,
+                        "parts":[
+                            {
+                                "key": "domains",
+                                "title": "one line one domain which needed to bind, no more than 10 lines.",
+                                "title_zh_cn": "每行一条需绑定的域名，最多不超过10条",
+                                "model":"textarea",
+                                "is_list": true
+                            }
+                        ]
+                    }
+                ]
+            }
+
+        ]
+    }
+]

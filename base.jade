@@ -1,0 +1,28 @@
+html
+	head
+		meta(content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0", name="viewport")
+		meta(content="yes", name="apple-mobile-web-app-capable")
+		meta(content="black", name="apple-mobile-web-app-status-bar-style")
+		meta(content="telephone=no", name="format-detection")
+		meta(name="renderer", content="webkit")
+		title
+			block title
+				| {{ request.args.s or site.title }}
+		load('fonts /template/css/blog.scss')
+	body
+		#body_wrapper
+			if site.configs.cover and has(site.configs.cover)
+				site_cover = site.configs.cover
+			else
+				site_cover = '/farbox_free_image.jpg'
+			header.header
+				.header_wrapper
+					h1.title
+						a(href='/')= site.title
+			#main
+				block content
+			#footer
+				.powered_by
+					a(href="https://www.farbox.com", target="_blank") Powered By FarBox.com
+					a(href="/admin") Admin
+					span ©2012-2015 Z.R.E.Y Inc.
