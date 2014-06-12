@@ -4,7 +4,7 @@ block title
 block content
     entries = get_data(type='post', limit=300).group("parent_path")
     for c, posts in entries
-        h2= c
+        h2.category= c
         ul.posts_list
             for post in posts
                 li
