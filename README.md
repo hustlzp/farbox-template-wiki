@@ -5,7 +5,7 @@ FarBox template for personal wiki.
 
 Usage:
 
-* Copy folder `template` to your FarBox blog's root path
+* Copy folder `template` to your FarBox blog's root path, such as `Dropbox/应用/FarBox/MyBlog/template`
 * Go to your blog's admin page > settings > template engine, and choose `Custom Template` in `Template Priority` select
 
 Enjoy.
