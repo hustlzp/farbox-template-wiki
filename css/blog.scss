@@ -116,7 +116,19 @@ ul, ol, dl {
   width: 80%;
   margin: 0 auto;
 
-  /* for archive and tags*/
+  .posts_list {
+    h2 {
+      margin: 0.5em 0;
+    }
+
+    li a {
+      &:hover {
+        border-bottom: 1px solid #999;
+      }
+    }
+  }
+
+  /* for archive and tags */
   .list_with_title {
     padding: 0;
     margin: 35px auto 0 auto;
