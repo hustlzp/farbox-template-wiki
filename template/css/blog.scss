@@ -10,6 +10,18 @@ $font-color: #333;
   transition: 0.25s;
 }
 
+.clearfix {
+  &:before,
+  &:after {
+    display: table;
+    content: " ";
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
 body {
   font-family: Georgia, "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
   color: #444;
@@ -113,21 +125,30 @@ ul, ol, dl {
 }
 
 #main {
-  width: 80%;
+  width: 960px;
   margin: 0 auto;
 
   .category {
-    margin: 0;
-  }
+    width: 33.333333%;
 
-  .posts_list {
     h2 {
-      margin: 0.5em 0;
+      margin: 0 30px 0 0;
+      border-bottom: 1px solid #999;
+      padding-bottom: 12px;
     }
 
-    li a {
-      &:hover {
-        border-bottom: 1px solid #999;
+    .posts_list {
+      list-style-type: none;
+      padding-left: 0;
+
+      h2 {
+        margin: 0.5em 0;
+      }
+
+      li a {
+        &:hover {
+          border-bottom: 1px solid #999;
+        }
       }
     }
   }
@@ -189,7 +210,7 @@ ul, ol, dl {
     }
   }
 
-  .posts, .detail_post {
+  .posts {
     margin: 45px auto;
   }
 

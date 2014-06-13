@@ -3,9 +3,16 @@ block title
     {{ site.title }}
 block content
     entries = get_data(type='post', limit=300, sort='asc').group("parent_path")
-    for c, posts in entries
-        h2.category= c
-        ul.posts_list
-            for post in posts
-                li
-                    a(href=post.url)= post.title
+    #categories-wap
+	    for c, posts in entries
+    		.category
+		        h2= c
+		        ul.posts_list
+		            for post in posts
+		                li
+		                	a(href=post.url)= post.title
+	script(type='text/javascript')
+		var container = document.getElementById('categories-wap');
+		var msnry = new Masonry( container, {
+		  itemSelector: '.category'
+		});

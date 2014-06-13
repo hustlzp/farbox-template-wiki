@@ -8,7 +8,7 @@ html
 		title
 			block title
 				| {{ request.args.s or site.title }}
-		load('fonts /template/css/blog.scss')
+		load('fonts /template/css/blog.scss /template/js/masonry.min.js')
 	body
 		#body_wrapper
 			if site.configs.cover and has(site.configs.cover)
@@ -19,7 +19,7 @@ html
 				.header_wrapper
 					h1.title
 						a(href='/')= site.title
-			#main
+			#main.clearfix
 				block content
 			#footer
 				.powered_by
