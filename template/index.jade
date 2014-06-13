@@ -2,7 +2,7 @@ extends base
 block title
     {{ site.title }}
 block content
-    entries = get_data(type='post', limit=300).group("parent_path")
+    entries = get_data(type='post', limit=300, sort='asc').group("parent_path")
     for c, posts in entries
         h2.category= c
         ul.posts_list
