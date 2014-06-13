@@ -1,11 +1,13 @@
 farbox-template-wiki
 ====================
 
-FarBox template for personal wiki.
+[FarBox](https://www.farbox.com/) template for personal wiki.
+
+DEMO: [http://wiki.hustlzp.com](http://wiki.hustlzp.com)
 
 Usage:
 
-* Copy folder `template` to your FarBox blog's root path, such as `Dropbox/应用/FarBox/MyBlog/template`
-* Go to your blog's admin page > settings > template engine, and choose `Custom Template` in `Template Priority` select
+* Copy folder `template` to your FarBox blog's root path
+* admin > settings > template engine, choose `Custom Template` in `Template Priority` select
 
 Enjoy.
