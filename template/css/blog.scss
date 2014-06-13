@@ -220,7 +220,7 @@ ul, ol, dl {
 
   .post {
     margin: 0 auto 10em auto;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.9;
     max-width: 910px;
 
@@ -321,6 +321,11 @@ ul, ol, dl {
         position: relative;
         display: block;
 
+        .pre,
+        .next {
+          margin-right: 0;
+        }
+
         .pre {
           position: absolute;
           text-align: left;
@@ -333,7 +338,6 @@ ul, ol, dl {
           position: absolute;
           text-align: right;
           width: 50%;
-
           right: 0;
           padding: 0 5px;
         }
@@ -730,7 +734,7 @@ h2 {
 }
 
 h3 {
-  font-size: 1.2em
+  font-size: 1.4em
 }
 
 ul, ol {
